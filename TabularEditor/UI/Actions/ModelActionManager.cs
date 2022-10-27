@@ -85,7 +85,7 @@ namespace TabularEditor.UI.Actions
             Add(new Separator(@"Create New"));
 
             // Add measure:
-            Add(new Action((s, m) => Governance.AllowCreate(typeof(Measure)) && (s.Count == 1 || s.Context.HasX(Context.TableObject)), (s, m) => s.Table.AddMeasure(displayFolder: s.CurrentFolder).Vis().Edit(), (s, m) => @"Create New\Measure", true, Context.CalculationGroupTable | Context.Table | Context.TableObject, Keys.Alt | Keys.D1));
+            Add(new Action((s, m) => Governance.AllowCreate(typeof(Measure)) && (s.Count == 1 || s.Context.HasX(Context.TableObject)), (s, m) => s.Table.AddMeasure(displayFolder: s.CurrentFolder,expression:"").Vis().Edit(), (s, m) => @"Create New\Measure", true, Context.CalculationGroupTable | Context.Table | Context.TableObject, Keys.Alt | Keys.D1));
 
             // Add calc column:
             Add(new Action((s, m) => Governance.AllowCreate(typeof(CalculatedColumn)) && (s.Count == 1 || s.Context.HasX(Context.TableObject)), (s, m) => s.Table.AddCalculatedColumn(displayFolder: s.CurrentFolder).Vis().Edit(), (s, m) => @"Create New\Calculated Column", true, Context.CalculationGroupTable | Context.Table | Context.TableObject, Keys.Alt | Keys.D2));

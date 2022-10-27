@@ -85,6 +85,11 @@ namespace TabularEditor.TOMWrapper
             return measure;
         }
 
+        public Measure AddMeasure(string name = null, object expression = null, string displayFolder = null)
+        {
+            return AddMeasure(name, expression.ToString(), displayFolder);
+        }
+
         /// <summary>
         /// Adds a new (legacy) partition to the table and returns a reference to the partition.
         /// </summary>
