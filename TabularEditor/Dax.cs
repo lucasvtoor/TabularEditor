@@ -467,7 +467,6 @@ namespace TabularEditor
          */
         public static DaxTable Calendar(DaxDateTime startDate, DaxDateTime endDate)
         {
-            Console.WriteLine("Reached Calendar");
             return new DaxTable($"CALENDAR({startDate},{endDate})");
         }
 

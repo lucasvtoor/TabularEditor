@@ -91,7 +91,7 @@
   <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>TabularEditor.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
@@ -156,6 +156,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -168,6 +169,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
@@ -884,9 +886,7 @@
     <Error Condition="!Exists('..\packages\Costura.Fody.3.3.2\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.3.3.2\build\Costura.Fody.props'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent Condition=" '$(Configuration)' == 'Release' ">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\x86\signtool.exe" sign /sha1 b2e9378dcc9030818a76527aa083f373772ae50b /tr "http://timestamp.sectigo.com" /td SHA256 /fd certHash ^
-        "$(SolutionDir)\TabularEditor\bin\Release\TabularEditor.exe" ^
-        "$(SolutionDir)\TabularEditor\obj\Release\TabularEditor.exe"
+    <PostBuildEvent Condition=" '$(Configuration)' == 'Release' ">
     </PostBuildEvent>
   </PropertyGroup>
   <!-- Uncomment below to automatically comment 14.0.0.0 dlls into target folder -->

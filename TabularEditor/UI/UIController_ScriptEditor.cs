@@ -176,7 +176,7 @@ namespace TabularEditor.UI
             {
                 ScriptEditor_HideErrors();
                 Scripting.ScriptOutputForm.Reset();
-
+                //Lucas mark waar hij het script vandaan haalt.
                 var script = !string.IsNullOrEmpty(UI.ScriptEditor.SelectedText) ? UI.ScriptEditor.SelectedText : UI.ScriptEditor.Text;
                 var offset = (!string.IsNullOrEmpty(UI.ScriptEditor.SelectedText) ? UI.ScriptEditor.Selection.FromLine : 0);
 

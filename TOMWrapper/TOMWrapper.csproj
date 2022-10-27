@@ -86,7 +86,6 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="TOMWrapper\StatementBuilder.cs" />
     <Compile Include="Utils\DbConnectionStringBuilderExtension.cs" />
     <Compile Include="PropertyGridUI\AlternateOfEditor.cs" />
     <Compile Include="PropertyGridUI\Converters\ConnectionStringConverter.cs" />
